@@ -1,0 +1,15 @@
+---
+defaults:
+    - _self_
+    - data_sources: sources
+    - training: custom
+
+monitoring:
+    name: test
+    exp: ${monitoring.name}_exp
+
+hydra:
+    job:
+        chdir: false
+    run:
+        dir: outputs/hydra/${now:%Y-%m-%d_%H-%M-%S}

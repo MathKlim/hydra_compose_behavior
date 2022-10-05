@@ -1,0 +1,6 @@
+data:
+      data_dir: /path
+raw:
+      data_dir_raw: ${..data.data_dir}/raw1
+      data_dir_raw2: ${.data_dir_raw}/raw2
+test: ${training.lr}
